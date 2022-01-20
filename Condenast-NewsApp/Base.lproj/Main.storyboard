@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="112" width="414" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="181" id="Shn-mU-vRN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ArticleTableViewCell" rowHeight="181" id="Shn-mU-vRN" customClass="ArticleTableViewCell" customModule="Condenast_NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Shn-mU-vRN" id="HBA-8M-O7s">
@@ -65,6 +65,12 @@
                                                 <constraint firstItem="DHV-8i-Ko2" firstAttribute="leading" secondItem="HBA-8M-O7s" secondAttribute="leading" constant="10" id="tVB-lq-Vs0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleImage" destination="DHV-8i-Ko2" id="gLs-J8-lzB"/>
+                                            <outlet property="articleTitle" destination="GkU-kJ-0dp" id="601-MQ-Ij8"/>
+                                            <outlet property="author" destination="OMl-1W-4tP" id="xyU-nh-sbc"/>
+                                            <outlet property="publishedTime" destination="IyH-tk-uov" id="C7W-on-sb0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -102,6 +108,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kd3-Og-xrI" secondAttribute="bottom" id="yVW-hL-nNi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newsListTable" destination="kd3-Og-xrI" id="a10-Hf-3KF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
